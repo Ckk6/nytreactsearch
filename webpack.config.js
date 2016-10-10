@@ -1,9 +1,9 @@
 module.exports = {
-  
-  // This code will be compiled by webpack according to the babel specifications
-  entry: "./app/App.js",
 
-  // The plain compiled Javascript will be output into this file
+  // This code will be compiled
+  entry: "./app/app.js",
+
+  // Then output into this file
   output: {
     filename: "public/bundle.js"
   },
@@ -14,10 +14,10 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        excluse: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          // These are the specific transformations we'll be using. 
+          // These are the specific transformations we'll be using.
           presets: ['react', 'es2015']
         }
       }
